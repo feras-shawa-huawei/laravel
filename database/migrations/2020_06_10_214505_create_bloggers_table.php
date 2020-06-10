@@ -14,8 +14,13 @@ class CreateBloggersTable extends Migration
     public function up()
     {
         Schema::create('bloggers', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->boolean('is_editor')->default(false);
+            $table->rememberToken(); 
+            $table->timestamps(); 
         });
     }
 

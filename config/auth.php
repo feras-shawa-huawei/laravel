@@ -81,10 +81,15 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'table' => App\Admin::class,
+        ],
+
+        'bloggers' => [
+            'driver' => 'eloquent',
+            'table' => App\Blogger::class,
+        ],
     ],
 
     /*

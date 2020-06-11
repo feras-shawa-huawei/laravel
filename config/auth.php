@@ -55,7 +55,7 @@ return [
         'blogger' => [
             'driver' => 'session',
             'provider' => 'bloggers'
-        ]
+        ],
     ],
 
     /*
@@ -78,17 +78,17 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Models\User::class,
         ],
 
         'admins' => [
             'driver' => 'eloquent',
-            'table' => App\Admin::class,
+            'model' => App\Admin::class,
         ],
 
         'bloggers' => [
             'driver' => 'eloquent',
-            'table' => App\Blogger::class,
+            'model' => App\Blogger::class,
         ],
     ],
 

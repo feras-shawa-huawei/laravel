@@ -1,18 +1,21 @@
 <?php
 
-namespace App;
+    namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notificatios\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatble;
+    use Illuminate\Notifications\Notifiable;
+    use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Blogger extends Authenticatble
-{
-    use Notifiable;
+    class Blogger extends Authenticatable
+    {
+        use Notifiable;
 
-    protected $gaurd = "blogger";
+        protected $guard = 'blogger';
 
-    protected $fillable = ['name','email','password'];
+        protected $fillable = [
+            'name', 'email', 'password',
+        ];
 
-    protected $hidden = ['password','remember_token'];
-}
+        protected $hidden = [
+            'password', 'remember_token',
+        ];
+    }
